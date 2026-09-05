@@ -1,0 +1,62 @@
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+loading target Qwen/Qwen3-4B-Instruct-2507
+Loading weights:   0%|          | 0/398 [00:00<?, ?it/s]Loading weights:   9%|▉         | 36/398 [00:00<00:01, 344.39it/s]Loading weights:  23%|██▎       | 92/398 [00:00<00:00, 457.93it/s]Loading weights:  38%|███▊      | 150/398 [00:00<00:00, 512.32it/s]Loading weights:  52%|█████▏    | 207/398 [00:00<00:00, 530.68it/s]Loading weights:  67%|██████▋   | 267/398 [00:00<00:00, 548.89it/s]Loading weights:  81%|████████  | 323/398 [00:00<00:00, 544.81it/s]Loading weights:  95%|█████████▌| 379/398 [00:00<00:00, 544.66it/s]Loading weights: 100%|██████████| 398/398 [00:00<00:00, 532.97it/s]
+loading draft  Qwen/Qwen3-0.6B
+Loading weights:   0%|          | 0/311 [00:00<?, ?it/s]Loading weights:  93%|█████████▎| 290/311 [00:00<00:00, 2891.67it/s]Loading weights: 100%|██████████| 311/311 [00:00<00:00, 2967.36it/s]
+
+baseline (target only)
+  code         33.3 tok/s  (128 tokens)
+  code         39.0 tok/s  (128 tokens)
+  code         39.0 tok/s  (128 tokens)
+  factual      39.0 tok/s  (128 tokens)
+  factual      39.0 tok/s  (128 tokens)
+  factual      38.9 tok/s  (128 tokens)
+  reasoning    38.8 tok/s  (128 tokens)
+  reasoning    39.1 tok/s  (128 tokens)
+  creative     39.1 tok/s  (128 tokens)
+  creative     39.1 tok/s  (128 tokens)
+  mean 38.4 tok/s
+
+draft pass costs 0.649 of a target pass
+
+k = 1
+  acceptance 0.709     33.5 tok/s   0.87x baseline   break-even acceptance 1.849   output identical: 5/10
+    code       acceptance 0.797
+    creative   acceptance 0.492
+    factual    acceptance 0.687
+    reasoning  acceptance 0.831
+    acceptance by position in the draft window: 0.70
+
+k = 2
+  acceptance 0.623     31.8 tok/s   0.83x baseline   break-even acceptance inf   output identical: 3/10
+    code       acceptance 0.733
+    creative   acceptance 0.369
+    factual    acceptance 0.599
+    reasoning  acceptance 0.747
+    acceptance by position in the draft window: 0.69 0.73
+
+k = 4
+  acceptance 0.482     26.8 tok/s   0.70x baseline   break-even acceptance inf   output identical: 5/10
+    code       acceptance 0.601
+    creative   acceptance 0.229
+    factual    acceptance 0.452
+    reasoning  acceptance 0.599
+    acceptance by position in the draft window: 0.67 0.69 0.77 0.77
+
+k = 6
+  acceptance 0.397     22.6 tok/s   0.59x baseline   break-even acceptance inf   output identical: 4/10
+    code       acceptance 0.500
+    creative   acceptance 0.160
+    factual    acceptance 0.375
+    reasoning  acceptance 0.513
+    acceptance by position in the draft window: 0.67 0.67 0.75 0.76 0.81 0.83
+
+k = 8
+  acceptance 0.338     19.5 tok/s   0.51x baseline   break-even acceptance inf   output identical: 5/10
+    code       acceptance 0.421
+    creative   acceptance 0.125
+    factual    acceptance 0.314
+    reasoning  acceptance 0.460
+    acceptance by position in the draft window: 0.68 0.66 0.72 0.78 0.84 0.83 0.79 0.83
+
+written to results/benchmark.json

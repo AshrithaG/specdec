@@ -1,0 +1,420 @@
+{
+  "target": "Qwen/Qwen3-4B-Instruct-2507",
+  "draft": "Qwen/Qwen3-0.6B",
+  "by_k": {
+    "1": {
+      "acceptance": 0.7094911483305477,
+      "tokens_per_second": 33.48746841277732,
+      "speedup": 0.8715091829219684,
+      "break_even_acceptance": 1.8490113877247312,
+      "identical_outputs": 5,
+      "by_domain": {
+        "code": 0.7967043875322611,
+        "factual": 0.6867895348908006,
+        "reasoning": 0.8306159420289855,
+        "creative": 0.49159891598915995
+      },
+      "acceptance_by_position": [
+        0.6984126984126984
+      ],
+      "rows": [
+        {
+          "domain": "code",
+          "acceptance": 0.8695652173913043,
+          "tok_s": 36.26282558472289,
+          "draft_frac": 0.42826520182419636
+        },
+        {
+          "domain": "code",
+          "acceptance": 0.7671232876712328,
+          "tok_s": 34.28351821857683,
+          "draft_frac": 0.4255632260290988
+        },
+        {
+          "domain": "code",
+          "acceptance": 0.7534246575342466,
+          "tok_s": 34.37519136789458,
+          "draft_frac": 0.42552550009701484
+        },
+        {
+          "domain": "factual",
+          "acceptance": 0.620253164556962,
+          "tok_s": 31.929134435900284,
+          "draft_frac": 0.4208411286387157
+        },
+        {
+          "domain": "factual",
+          "acceptance": 0.6623376623376623,
+          "tok_s": 32.673649057578295,
+          "draft_frac": 0.42369172736000565
+        },
+        {
+          "domain": "factual",
+          "acceptance": 0.7777777777777778,
+          "tok_s": 34.73504358428703,
+          "draft_frac": 0.42686505134520725
+        },
+        {
+          "domain": "reasoning",
+          "acceptance": 0.7916666666666666,
+          "tok_s": 34.77819880155983,
+          "draft_frac": 0.42876689879737545
+        },
+        {
+          "domain": "reasoning",
+          "acceptance": 0.8695652173913043,
+          "tok_s": 36.23508965445422,
+          "draft_frac": 0.42961323631412984
+        },
+        {
+          "domain": "creative",
+          "acceptance": 0.4222222222222222,
+          "tok_s": 28.43752706024028,
+          "draft_frac": 0.4151331847391105
+        },
+        {
+          "domain": "creative",
+          "acceptance": 0.5609756097560976,
+          "tok_s": 31.16450636255897,
+          "draft_frac": 0.4203528015645266
+        }
+      ]
+    },
+    "2": {
+      "acceptance": 0.622744769766536,
+      "tokens_per_second": 31.847893023230917,
+      "speedup": 0.8288393402671159,
+      "break_even_acceptance": Infinity,
+      "identical_outputs": 3,
+      "by_domain": {
+        "code": 0.7325713818975275,
+        "factual": 0.5992087644552647,
+        "reasoning": 0.7472222222222222,
+        "creative": 0.3688314070812695
+      },
+      "acceptance_by_position": [
+        0.6928327645051194,
+        0.729064039408867
+      ],
+      "rows": [
+        {
+          "domain": "code",
+          "acceptance": 0.826530612244898,
+          "tok_s": 37.21424819556419,
+          "draft_frac": 0.5850027233068364
+        },
+        {
+          "domain": "code",
+          "acceptance": 0.7075471698113207,
+          "tok_s": 34.564712942060844,
+          "draft_frac": 0.5824701586924221
+        },
+        {
+          "domain": "code",
+          "acceptance": 0.6636363636363637,
+          "tok_s": 33.374850257163935,
+          "draft_frac": 0.5818202638983861
+        },
+        {
+          "domain": "factual",
+          "acceptance": 0.5483870967741935,
+          "tok_s": 29.588208541542283,
+          "draft_frac": 0.57970775971543
+        },
+        {
+          "domain": "factual",
+          "acceptance": 0.532258064516129,
+          "tok_s": 29.50040503800827,
+          "draft_frac": 0.5791171856117834
+        },
+        {
+          "domain": "factual",
+          "acceptance": 0.7169811320754716,
+          "tok_s": 34.29004962215945,
+          "draft_frac": 0.5828431040115871
+        },
+        {
+          "domain": "reasoning",
+          "acceptance": 0.6944444444444444,
+          "tok_s": 33.64514445767427,
+          "draft_frac": 0.5821447136088757
+        },
+        {
+          "domain": "reasoning",
+          "acceptance": 0.8,
+          "tok_s": 36.196283740170834,
+          "draft_frac": 0.5840100264967173
+        },
+        {
+          "domain": "creative",
+          "acceptance": 0.310126582278481,
+          "tok_s": 23.403493184525374,
+          "draft_frac": 0.574678412911498
+        },
+        {
+          "domain": "creative",
+          "acceptance": 0.427536231884058,
+          "tok_s": 26.701534253439696,
+          "draft_frac": 0.5757985390360569
+        }
+      ]
+    },
+    "4": {
+      "acceptance": 0.4815755585985849,
+      "tokens_per_second": 26.84977286225673,
+      "speedup": 0.6987635888264843,
+      "break_even_acceptance": Infinity,
+      "identical_outputs": 5,
+      "by_domain": {
+        "code": 0.6014430014430014,
+        "factual": 0.45230510115378536,
+        "reasoning": 0.5986842105263157,
+        "creative": 0.2285714285714286
+      },
+      "acceptance_by_position": [
+        0.6659528907922913,
+        0.6945337620578779,
+        0.7685185185185185,
+        0.7710843373493976
+      ],
+      "rows": [
+        {
+          "domain": "code",
+          "acceptance": 0.7424242424242424,
+          "tok_s": 35.47891672945998,
+          "draft_frac": 0.7332680669653188
+        },
+        {
+          "domain": "code",
+          "acceptance": 0.55,
+          "tok_s": 29.679616135399012,
+          "draft_frac": 0.7311731255350726
+        },
+        {
+          "domain": "code",
+          "acceptance": 0.5119047619047619,
+          "tok_s": 28.30889256561538,
+          "draft_frac": 0.7312548693752428
+        },
+        {
+          "domain": "factual",
+          "acceptance": 0.3201754385964912,
+          "tok_s": 20.939084711662492,
+          "draft_frac": 0.7296073758762064
+        },
+        {
+          "domain": "factual",
+          "acceptance": 0.421875,
+          "tok_s": 24.779157659074517,
+          "draft_frac": 0.7298969409869246
+        },
+        {
+          "domain": "factual",
+          "acceptance": 0.6148648648648649,
+          "tok_s": 32.135997597596564,
+          "draft_frac": 0.7318449865046976
+        },
+        {
+          "domain": "reasoning",
+          "acceptance": 0.5921052631578947,
+          "tok_s": 31.224285299713742,
+          "draft_frac": 0.7314247024682758
+        },
+        {
+          "domain": "reasoning",
+          "acceptance": 0.6052631578947368,
+          "tok_s": 30.54968126231695,
+          "draft_frac": 0.7240210163177975
+        },
+        {
+          "domain": "creative",
+          "acceptance": 0.20714285714285716,
+          "tok_s": 16.930008133269894,
+          "draft_frac": 0.7293199973144897
+        },
+        {
+          "domain": "creative",
+          "acceptance": 0.25,
+          "tok_s": 18.47208852845875,
+          "draft_frac": 0.7293909092047072
+        }
+      ]
+    },
+    "6": {
+      "acceptance": 0.3968906976750114,
+      "tokens_per_second": 22.592960942407238,
+      "speedup": 0.5879803360469156,
+      "break_even_acceptance": Infinity,
+      "identical_outputs": 4,
+      "by_domain": {
+        "code": 0.4998347553903109,
+        "factual": 0.37474747474747466,
+        "reasoning": 0.5130718954248366,
+        "creative": 0.15950824774354186
+      },
+      "acceptance_by_position": [
+        0.6746987951807228,
+        0.6714285714285714,
+        0.75,
+        0.7588652482269503,
+        0.8130841121495327,
+        0.8275862068965517
+      ],
+      "rows": [
+        {
+          "domain": "code",
+          "acceptance": 0.6419753086419753,
+          "tok_s": 31.622928539974026,
+          "draft_frac": 0.8035698049274839
+        },
+        {
+          "domain": "code",
+          "acceptance": 0.44761904761904764,
+          "tok_s": 24.507263977461374,
+          "draft_frac": 0.8018646215654802
+        },
+        {
+          "domain": "code",
+          "acceptance": 0.4099099099099099,
+          "tok_s": 23.203922083194456,
+          "draft_frac": 0.8015592918685241
+        },
+        {
+          "domain": "factual",
+          "acceptance": 0.3111111111111111,
+          "tok_s": 19.20899605303674,
+          "draft_frac": 0.8019367803664798
+        },
+        {
+          "domain": "factual",
+          "acceptance": 0.3333333333333333,
+          "tok_s": 20.102841722223403,
+          "draft_frac": 0.8013786300267672
+        },
+        {
+          "domain": "factual",
+          "acceptance": 0.4797979797979798,
+          "tok_s": 26.14071190014241,
+          "draft_frac": 0.8020439191073542
+        },
+        {
+          "domain": "reasoning",
+          "acceptance": 0.47058823529411764,
+          "tok_s": 25.55318615889977,
+          "draft_frac": 0.801925678504357
+        },
+        {
+          "domain": "reasoning",
+          "acceptance": 0.5555555555555556,
+          "tok_s": 28.929017666097934,
+          "draft_frac": 0.8021891746691362
+        },
+        {
+          "domain": "creative",
+          "acceptance": 0.14705882352941177,
+          "tok_s": 12.826827409725036,
+          "draft_frac": 0.8006116844610331
+        },
+        {
+          "domain": "creative",
+          "acceptance": 0.17195767195767195,
+          "tok_s": 13.833913913317188,
+          "draft_frac": 0.8006326957476497
+        }
+      ]
+    },
+    "8": {
+      "acceptance": 0.33763837560140253,
+      "tokens_per_second": 19.515536928460186,
+      "speedup": 0.5078905766527385,
+      "break_even_acceptance": Infinity,
+      "identical_outputs": 5,
+      "by_domain": {
+        "code": 0.42144097222222227,
+        "factual": 0.31386836343732893,
+        "reasoning": 0.4604086845466156,
+        "creative": 0.12481918997107039
+      },
+      "acceptance_by_position": [
+        0.676923076923077,
+        0.6553030303030303,
+        0.7225433526011561,
+        0.776,
+        0.8350515463917526,
+        0.8271604938271605,
+        0.7910447761194029,
+        0.8301886792452831
+      ],
+      "rows": [
+        {
+          "domain": "code",
+          "acceptance": 0.5625,
+          "tok_s": 28.46525310129602,
+          "draft_frac": 0.8439941055830418
+        },
+        {
+          "domain": "code",
+          "acceptance": 0.37890625,
+          "tok_s": 21.455695486543856,
+          "draft_frac": 0.8424372732160349
+        },
+        {
+          "domain": "code",
+          "acceptance": 0.3229166666666667,
+          "tok_s": 19.113507063896105,
+          "draft_frac": 0.8429011290844429
+        },
+        {
+          "domain": "factual",
+          "acceptance": 0.25595238095238093,
+          "tok_s": 16.348140385048218,
+          "draft_frac": 0.8423531690333509
+        },
+        {
+          "domain": "factual",
+          "acceptance": 0.25892857142857145,
+          "tok_s": 16.397349236880448,
+          "draft_frac": 0.8421556573584362
+        },
+        {
+          "domain": "factual",
+          "acceptance": 0.4267241379310345,
+          "tok_s": 23.489164437323197,
+          "draft_frac": 0.8432621582376543
+        },
+        {
+          "domain": "reasoning",
+          "acceptance": 0.44396551724137934,
+          "tok_s": 23.38621034648892,
+          "draft_frac": 0.8428211600725526
+        },
+        {
+          "domain": "reasoning",
+          "acceptance": 0.47685185185185186,
+          "tok_s": 25.122319287039396,
+          "draft_frac": 0.8430786217433809
+        },
+        {
+          "domain": "creative",
+          "acceptance": 0.11029411764705882,
+          "tok_s": 10.104764381385346,
+          "draft_frac": 0.8420543997529573
+        },
+        {
+          "domain": "creative",
+          "acceptance": 0.13934426229508196,
+          "tok_s": 11.272965558700383,
+          "draft_frac": 0.8420603375182518
+        }
+      ]
+    }
+  },
+  "baseline": {
+    "tokens_per_second": 38.42468796542291
+  },
+  "cost_ratio": {
+    "draft_per_token_s": 0.01991077938476916,
+    "target_per_pass_s": 0.03067911727438596,
+    "ratio": 0.6490010519759217
+  }
+}

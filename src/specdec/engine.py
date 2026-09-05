@@ -218,15 +218,22 @@ def generate_speculative(target, draft, tokenizer, prompt: str, k: int = 4,
     return Result(tokenizer.decode(out_ids, skip_special_tokens=True), out_ids, steps, seconds)
 
 
-def break_even_acceptance(draft_cost: float, target_cost: float, k: int) -> float:
+def break_even_acceptance(draft_cost: float, target_cost: float, k: int = 0) -> float:
     """The acceptance rate below which speculation is a net loss.
 
-    A speculative step costs k draft passes plus one target pass and yields
-    1 + k*a tokens, where a is the acceptance rate. Plain decoding costs one
-    target pass per token. Setting the two equal and solving for a gives the
-    threshold, which is why a fast draft model matters more than an accurate
-    one up to a point.
+    A speculative step costs k draft passes plus one target pass, so
+    T(1 + k*r) where r is the draft/target cost ratio, and yields 1 + k*a
+    tokens for acceptance rate a. Plain decoding costs T per token. Setting
+    them equal:
+
+        (1 + k*r) / (1 + k*a) = 1   ->   a = r
+
+    The window size cancels. What decides whether speculation pays is only
+    whether the draft model accepts more often than it costs, which is why a
+    fast draft matters more than an accurate one: halving draft cost lowers the
+    bar for every k at once, while raising acceptance is bounded by 1.
+
+    `k` is accepted for call compatibility and deliberately unused.
     """
-    r = draft_cost / target_cost
-    denom = k * (1.0 - k * r) if k * r < 1 else 0.0
-    return float("inf") if denom <= 0 else max(0.0, (k * r) / denom)
+    del k
+    return float(draft_cost / target_cost) if target_cost > 0 else float("inf")
