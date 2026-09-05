@@ -20,7 +20,13 @@ from transformers import AutoModelForCausalLM, AutoTokenizer
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "src"))
 from specdec.engine import generate_baseline, generate_speculative  # noqa: E402
 
-MODEL = sys.argv[1] if len(sys.argv) > 1 else "Qwen/Qwen3-0.6B"
+import argparse
+_ap = argparse.ArgumentParser()
+_ap.add_argument("model", nargs="?", default="Qwen/Qwen3-0.6B")
+_ap.add_argument("--device", default="cpu")
+_ap.add_argument("--dtype", default="float32", choices=["float32", "bfloat16", "float16"])
+_args = _ap.parse_args()
+MODEL = _args.model
 PROMPTS = [
     "List three prime numbers.",
     "The capital of France is",
@@ -28,8 +34,13 @@ PROMPTS = [
 ]
 
 tok = AutoTokenizer.from_pretrained(MODEL)
-model = AutoModelForCausalLM.from_pretrained(MODEL, dtype=torch.float32).eval()
-print(f"{MODEL} on {model.device}\n")
+model = AutoModelForCausalLM.from_pretrained(
+    MODEL, dtype=getattr(torch, _args.dtype)).to(_args.device).eval()
+print(f"{MODEL} on {model.device} in {_args.dtype}\n")
+print("Self-speculation: draft and target are the same weights, so in exact")
+print("arithmetic every proposal must be accepted. Anything below 1.000 is the")
+print("model disagreeing with itself, which can only come from the numerics of")
+print("scoring k+1 tokens in one pass versus one token at a time.\n")
 
 ok = True
 for prompt in PROMPTS:
