@@ -141,3 +141,7 @@ much smaller draft model would produce a different cost ratio and therefore a
 different conclusion. The contribution here is the framing: the decision reduces
 to one measurable number, and that number is easy to measure before building
 anything.
+
+## License
+
+Code released under the MIT License (see `LICENSE`).
